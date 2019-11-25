@@ -12,17 +12,17 @@ from pyreduce import datasets
 instrument = "UVES"
 target = "HD132205"
 night = "2010-04-01"
-mode = "middle"
+mode = "MIDDLE"
 steps = (
-    # "bias",
-    # "flat",
-    # "orders",
-    # "norm_flat",
+     "bias",
+     "flat",
+     "orders",
+     "norm_flat",
     "wavecal",
-    # "curvature",
-    # "science",
-    # "continuum",
-    # "finalize",
+     "curvature",
+     "science",
+     "continuum",
+     "finalize",
 )
 
 # some basic settings
@@ -30,7 +30,7 @@ steps = (
 # Feel free to change this to your own preference, values in curly brackets will be replaced with the actual values {}
 
 # load dataset (and save the location)
-base_dir = datasets.UVES_HD132205()
+base_dir = datasets.UVES()
 input_dir = "raw/"
 output_dir = "reduced/{instrument}/{target}/{night}/{mode}"
 
